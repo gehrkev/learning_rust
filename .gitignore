@@ -1,3 +1,7 @@
-/target
-/*/target
-/.idea
+target
+.idea
+/Section_2/assignment/target/
+/Section_2/control_flow/target/
+/Section_2/data_types/target/
+/Section_2/functions/target/
+/Section_2/variables/target/
