@@ -57,7 +57,7 @@ fn read_and_write(args: &Arguments) {
     };
 
     match fs::write(&args.output_file, replace_data) { //yanked the & from replace_data because it will be deref'd anyway
-        Ok(_) => {}
+        Ok(_) => {},
         Err(e) => {
             eprintln!("{} failed to write to file {}: {:?}", "Error:".red().bold(), args.output_file, e);
             std::process::exit(1);
