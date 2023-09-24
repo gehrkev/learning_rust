@@ -23,6 +23,8 @@
       <sourceFolder url="file://$MODULE_DIR$/cli/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_12/assignment/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_12/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_13/assignment/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_13/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/assignment/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/control_flow/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/data_types/target" />
@@ -44,6 +46,8 @@
       <excludeFolder url="file://$MODULE_DIR$/cli/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_12/assignment/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_12/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_13/assignment/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_13/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
