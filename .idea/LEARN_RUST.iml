@@ -31,6 +31,7 @@
       <sourceFolder url="file://$MODULE_DIR$/section_15/macros/macro_ex/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_15/macros/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_15/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_16/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/assignment/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/control_flow/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/data_types/target" />
@@ -60,6 +61,7 @@
       <excludeFolder url="file://$MODULE_DIR$/section_15/macros/macro_ex/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_15/macros/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_15/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_16/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
