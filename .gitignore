@@ -132,3 +132,6 @@ Cargo.lock
 
 # End of https://www.toptal.com/developers/gitignore/api/intellij,rust
 /.vscode/
+chat/.idea/vcs.xml
+chat/.idea/modules.xml
+chat/.idea/chat.iml
