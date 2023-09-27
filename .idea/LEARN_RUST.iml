@@ -34,6 +34,8 @@
       <sourceFolder url="file://$MODULE_DIR$/section_16/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chat/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_17/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/assignment/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/control_flow/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/data_types/target" />
@@ -66,6 +68,7 @@
       <excludeFolder url="file://$MODULE_DIR$/section_16/target" />
       <excludeFolder url="file://$MODULE_DIR$/chat/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_17/target" />
+      <excludeFolder url="file://$MODULE_DIR$/wasm-game-of-life/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
