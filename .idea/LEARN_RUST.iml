@@ -36,6 +36,12 @@
       <sourceFolder url="file://$MODULE_DIR$/section_17/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/wasm-game-of-life/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/section_20/assignment/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_20/factorial/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_20/fibonacci/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_20/palindrome/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_20/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_20/tower_of_hanoi/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/assignment/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/control_flow/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/data_types/target" />
@@ -69,6 +75,12 @@
       <excludeFolder url="file://$MODULE_DIR$/chat/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_17/target" />
       <excludeFolder url="file://$MODULE_DIR$/wasm-game-of-life/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_20/assignment/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_20/factorial/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_20/fibonacci/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_20/palindrome/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_20/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_20/tower_of_hanoi/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

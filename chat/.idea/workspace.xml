@@ -12,18 +12,7 @@
     <cargoProject FILE="$PROJECT_DIR$/Cargo.toml" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dfeca283-f1a3-4792-ae53-6a5c83f42af4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/bin/client.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bin/server/chats.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bin/server/chats_map.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bin/server/connection.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/bin/server/main.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.rs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../section_17/read.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/LEARN_RUST.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/LEARN_RUST.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Section_2/assignment/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Section_2/assignment/target/.rustc_info.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Section_2/control_flow/target/.rustc_info.json" beforeDir="false" afterPath="$PROJECT_DIR$/../Section_2/control_flow/target/.rustc_info.json" afterDir="false" />
-    </list>
+    <list default="true" id="dfeca283-f1a3-4792-ae53-6a5c83f42af4" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +45,7 @@
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/vitor/projetos/Rust_The_Complete_Guide/chat",
+    "last_opened_file_path": "C:/Users/vitor/RustroverProjects/LEARN_RUST",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -169,7 +158,7 @@
       <option name="presentableId" value="Default" />
       <updated>1695760973776</updated>
       <workItem from="1695760974822" duration="2548000" />
-      <workItem from="1695767498219" duration="2978000" />
+      <workItem from="1695767498219" duration="4208000" />
     </task>
     <servers />
   </component>
