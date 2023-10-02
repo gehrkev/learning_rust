@@ -44,6 +44,8 @@
       <sourceFolder url="file://$MODULE_DIR$/section_20/tower_of_hanoi/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_21/src" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/section_22a/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_22/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/section_23/src" isTestSource="false" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/assignment/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/control_flow/target" />
       <excludeFolder url="file://$MODULE_DIR$/Section_2/data_types/target" />
@@ -85,6 +87,8 @@
       <excludeFolder url="file://$MODULE_DIR$/section_20/tower_of_hanoi/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_21/target" />
       <excludeFolder url="file://$MODULE_DIR$/section_22a/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_22/target" />
+      <excludeFolder url="file://$MODULE_DIR$/section_23/target" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
