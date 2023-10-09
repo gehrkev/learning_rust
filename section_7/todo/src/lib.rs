@@ -1,6 +1,6 @@
 mod list {
 
-    pub struct Tasks{
+    pub struct Tasks {
         pub item: String,
     }
 
@@ -10,7 +10,6 @@ mod list {
     //cargo modules generate tree
     //cargo modules generate tree --with-types <--- doesn't work
     //cargo modules generate tree --fns --types <--- use this instead
-
 }
 
 mod things_todo;
@@ -18,9 +17,10 @@ use crate::things_todo::add_activity;
 use things_todo::items_completed;
 use things_todo::items_completed::test::test_fn;
 
-
-fn lets_add_task(){
-    let task = list::Tasks {item: String::from("Tasks")};
+fn lets_add_task() {
+    let task = list::Tasks {
+        item: String::from("Tasks"),
+    };
     add_activity(); //relative path
     items_completed::remove_task();
     test_fn();

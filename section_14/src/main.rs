@@ -4,29 +4,35 @@
 // use std::sync::mpsc;
 // use std::sync::{Arc, Mutex};
 
-use rayon::prelude::*;
 use num::{BigUint, One};
+use rayon::prelude::*;
 use std::time::Instant;
 
-fn factorial(num: u32) -> BigUint { //return this because u128 factorial goes up to only 35
+fn factorial(num: u32) -> BigUint {
+    //return this because u128 factorial goes up to only 35
     if num == 0 || num == 1 {
         return BigUint::one();
     } else {
-        (1..=num).map(BigUint::from).reduce(|acc, x| acc * x).unwrap()
+        (1..=num)
+            .map(BigUint::from)
+            .reduce(|acc, x| acc * x)
+            .unwrap()
     }
 }
 
 fn multi_fac(num: u32) -> BigUint {
-    if num == 0 || num == 1{
-        return BigUint::one()
+    if num == 0 || num == 1 {
+        return BigUint::one();
     } else {
-        (1..=num).into_par_iter().map(BigUint::from).reduce(|| BigUint::one(), |acc, x| acc * x)
+        (1..=num)
+            .into_par_iter()
+            .map(BigUint::from)
+            .reduce(|| BigUint::one(), |acc, x| acc * x)
         //the reduce used here is from rayon
     }
 }
 
 fn main() {
-
     println!("Calculating factorial of 50.000 using single thread");
     let now = Instant::now();
     factorial(50000);

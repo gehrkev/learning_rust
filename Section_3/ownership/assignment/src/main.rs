@@ -12,7 +12,7 @@ fn main() {
 }
 
 fn function(val: &Vec<i32>) -> bool {
-// fn function(val: Vec<i32>) -> bool {
+    // fn function(val: Vec<i32>) -> bool {
     if val[0] == 1 {
         true
     } else {

@@ -1,5 +1,4 @@
 fn main() {
-
     // let var = 1; //fixed size - on the stack
     // let mut s = "Hello".to_string(); //strings can change in size - on the heap
     // s.push_str((",world"));
@@ -55,10 +54,9 @@ fn main() {
     let mut s = String::from("hello");
     change_string(&mut s);
     println!("{}", s)
-
 }
 
-fn change_string(some_string: &mut String){
+fn change_string(some_string: &mut String) {
     some_string.push_str(", world!");
 }
 

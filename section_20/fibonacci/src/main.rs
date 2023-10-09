@@ -6,7 +6,7 @@ fn fib(num: u32) -> u32 {
             let n1 = fib(num - 1);
             let n2 = fib(num - 2);
             n1 + n2
-        },
+        }
     }
 }
 

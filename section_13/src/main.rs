@@ -1,5 +1,5 @@
-use std::rc::Rc;
 use std::cell::RefCell;
+use std::rc::Rc;
 
 struct Flagger {
     is_true: Rc<RefCell<bool>>,
@@ -13,14 +13,14 @@ fn main() {
     let x = 5;
     let y = &x;
 
-    assert_eq!(5,x);
-    assert_eq!(5,*y); //deallocation
+    assert_eq!(5, x);
+    assert_eq!(5, *y); //deallocation
 
     let x = 5;
     let y = Box::new(x);
 
-    assert_eq!(5,x);
-    assert_eq!(5,*y); //deallocation
+    assert_eq!(5, x);
+    assert_eq!(5, *y); //deallocation
 
     println!("{:?}", y);
 
@@ -36,7 +36,9 @@ fn main() {
 
     println!("{}, {}, {}", s1.contains("Point"), s2, s3.contains("ter"));
 
-    let flag = Flagger {is_true: Rc::new(RefCell::new(true))};
+    let flag = Flagger {
+        is_true: Rc::new(RefCell::new(true)),
+    };
     //borrow returns Ref<T>
     //borrow_mut returns RefMut<T>
 
@@ -46,5 +48,4 @@ fn main() {
     let mut mut_ref = reference.borrow_mut();
     *mut_ref = false; //dereference first to access inside;
     println!("{}", mut_ref);
-
 }

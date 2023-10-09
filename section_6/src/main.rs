@@ -15,7 +15,7 @@ struct Course {
 }
 
 impl Drop for Course {
-    fn drop(&mut self){
+    fn drop(&mut self) {
         println!("Dropping: {}", self.author)
     }
 }
@@ -25,7 +25,7 @@ struct AnotherCourse {
     author: String,
 }
 
-impl Overview for Course{
+impl Overview for Course {
     // fn overview(&self) -> String {
     //     format!("{}, {}", self.author, self.headline)
     // }
@@ -46,21 +46,21 @@ struct Point<T> {
 }
 
 impl<T> Add for Point<T>
-    where
-    T: Add<Output = T> {
-        type Output = Self;
-        fn add(self, rhs: Self) -> Self {
-            Point {
-                x: self.x + rhs.x,
-                y: self.y + rhs.y
-            }
+where
+    T: Add<Output = T>,
+{
+    type Output = Self;
+    fn add(self, rhs: Self) -> Self {
+        Point {
+            x: self.x + rhs.x,
+            y: self.y + rhs.y,
         }
     }
+}
 
 fn main() {
-
-    let coord = Point{x: 5.0, y: 5.0};
-    let coord2 = Point{x: 1.0, y: 2.0};
+    let coord = Point { x: 5.0, y: 5.0 };
+    let coord2 = Point { x: 1.0, y: 2.0 };
 
     let sum = coord + coord2;
     println!("{:?}", sum);
@@ -84,12 +84,9 @@ fn main() {
     // println!("{}", course2.overview()); //impl for anothercourse
     // call_overview(&course1);
     // call_overview(&course2);
-
-
-
 }
 // fn call_overview(item: &impl Overview){
-fn call_overview<T: Overview>(item: &T){
+fn call_overview<T: Overview>(item: &T) {
     println!("Overview: {}", item.overview())
 }
 
@@ -100,7 +97,7 @@ fn call_overview<T: Overview>(item: &T){
 
 trait Clone: Sized {
     fn clone(&self) -> Self;
-    fn clone_from(&mut self, source: &Self){
+    fn clone_from(&mut self, source: &Self) {
         *self = source.clone()
     }
 }

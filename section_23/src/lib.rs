@@ -42,9 +42,9 @@ mod test {
         queue.enqueue(10);
         queue.enqueue(20);
         queue.enqueue(30);
-        assert_eq!(queue.length() , 3);
+        assert_eq!(queue.length(), 3);
         assert_eq!(queue.dequeue(), Some(10));
-        assert_eq!(queue.length() , 2);
+        assert_eq!(queue.length(), 2);
         queue.enqueue(10);
         assert_eq!(queue.dequeue(), Some(20));
         assert_eq!(queue.peek(), Some(&30));

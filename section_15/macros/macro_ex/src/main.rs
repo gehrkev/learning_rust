@@ -18,7 +18,7 @@ macro_rules! average{
 #[debug_print]
 fn main() {
     println!("Hello, world");
-    println!("{}",average!());
-    println!("{}",average!(1.0,2.0,3.0));
-    println!("{}",average!(1,2,3,4,5));
+    println!("{}", average!());
+    println!("{}", average!(1.0, 2.0, 3.0));
+    println!("{}", average!(1, 2, 3, 4, 5));
 }

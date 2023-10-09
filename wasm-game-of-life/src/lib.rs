@@ -24,7 +24,7 @@ impl Universe {
 
     fn live_neighbor_count(&self, row: u32, column: u32) -> u8 {
         let mut count = 0;
-        for delta_row in [self.height -1, 0, 1].iter().cloned() {
+        for delta_row in [self.height - 1, 0, 1].iter().cloned() {
             for delta_column in [self.width - 1, 0, 1].iter().cloned() {
                 if delta_row == 0 && delta_column == 0 {
                     continue;
@@ -73,13 +73,15 @@ impl Universe {
         let width = 64;
         let height = 64;
 
-        let cells = (0..height*width).map(|i| {
-            if i % 2 == 0 || i % 7 == 0 {
-                Cell::Alive
-            } else {
-                Cell::Dead
-            }
-        }).collect();
+        let cells = (0..height * width)
+            .map(|i| {
+                if i % 2 == 0 || i % 7 == 0 {
+                    Cell::Alive
+                } else {
+                    Cell::Dead
+                }
+            })
+            .collect();
 
         Universe {
             width,
@@ -91,7 +93,6 @@ impl Universe {
     pub fn render(&self) -> String {
         self.to_string()
     }
-
 }
 
 use std::fmt;
@@ -99,7 +100,7 @@ impl fmt::Display for Universe {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         for line in self.cells.as_slice().chunks(self.width as usize) {
             for &cell in line {
-                let symbol = if cell == Cell::Dead {'◻'} else { '◼' };
+                let symbol = if cell == Cell::Dead { '◻' } else { '◼' };
                 write!(f, "{}", symbol)?;
             }
             write!(f, "\n");

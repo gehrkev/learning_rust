@@ -1,12 +1,12 @@
-use async_std::task;
 use crate::connection::Leaving;
+use async_std::task;
 use std::sync::Arc;
 use tokio::sync::broadcast;
 
 use chat::Server;
 use tokio::sync::broadcast::error::RecvError;
 
-pub struct Chats{
+pub struct Chats {
     name: Arc<String>,
     publisher: broadcast::Sender<Arc<String>>,
 }
@@ -14,7 +14,7 @@ pub struct Chats{
 impl Chats {
     pub fn new(name: Arc<String>) -> Chats {
         let (publisher, _) = broadcast::channel(1000);
-        Chats { name, publisher}
+        Chats { name, publisher }
     }
 
     pub fn join(&self, leaving: Arc<Leaving>) {
@@ -27,8 +27,11 @@ impl Chats {
     }
 }
 
-async fn sub(chat_name: Arc<String>, mut receiver: broadcast::Receiver<Arc<String>>, leaving: Arc<Leaving>)
-{
+async fn sub(
+    chat_name: Arc<String>,
+    mut receiver: broadcast::Receiver<Arc<String>>,
+    leaving: Arc<Leaving>,
+) {
     loop {
         let packet = match receiver.recv().await {
             Ok(message) => Server::Message {
@@ -37,13 +40,12 @@ async fn sub(chat_name: Arc<String>, mut receiver: broadcast::Receiver<Arc<Strin
             },
             Err(RecvError::Lagged(n)) => {
                 Server::Error(format!("Dropped {} messages from {}.", n, chat_name))
-            },
+            }
             Err(RecvError::Closed) => break,
         };
 
-        if leaving.send(packet).await.is_err(){
+        if leaving.send(packet).await.is_err() {
             break;
         }
-
     }
 }

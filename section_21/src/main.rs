@@ -71,7 +71,6 @@ fn partition(vector: &mut [i32], start: usize, end: usize) -> usize {
     let mut i = start;
     let pivot = end;
 
-
     for j in start..=end - 1 {
         if vector[j] < vector[pivot] {
             vector.swap(i, j);
@@ -105,4 +104,3 @@ fn main() {
     quick_sort(&mut vec, 0, len);
     println!("After quick sorting: {:?}", vec);
 }
-

@@ -8,8 +8,9 @@ fn main() {
 //     println!("{}", phrase);
 // }
 
-fn gcd(mut a: u64, mut b: u64) -> u64 { //greatest common denominator
-    while a != 0{
+fn gcd(mut a: u64, mut b: u64) -> u64 {
+    //greatest common denominator
+    while a != 0 {
         if a < b {
             let c = a;
             a = b;
@@ -21,7 +22,7 @@ fn gcd(mut a: u64, mut b: u64) -> u64 { //greatest common denominator
 }
 
 fn multiple_return_values(flag: bool) -> bool {
-    if flag == true{
+    if flag == true {
         true // notice there's no ';' - returns it
     } else {
         false // same as above

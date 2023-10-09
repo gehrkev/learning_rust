@@ -27,14 +27,15 @@
 //     }
 // }
 
-struct  MyString<'a> {
+struct MyString<'a> {
     text: &'a str,
 }
 
 fn main() {
-
     let str1 = String::from("this is my string");
-    let x = MyString{text: str1.as_str()};
+    let x = MyString {
+        text: str1.as_str(),
+    };
     let s: &'static str = "i have a static lifetime";
 
     // let user1 = User{active: true, username: String::from("Vitor"), sign_in_count: 0};
@@ -65,14 +66,11 @@ fn main() {
     // &i32
     // &'a i32
     // &'a mut i32
-
 }
 
 // fn example<'a, 'b>(x: &'a str, y: &'b str) -> &'b str {
 //     y
 // } // 'a for one parameter, 'b for second parameter, 'c etc...
-
-
 
 // fn build_user(username: String) -> User {
 //     User {

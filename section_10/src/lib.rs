@@ -10,18 +10,18 @@ mod tests {
     #[test]
     // #[ignore]
     #[should_panic]
-    fn it_fails(){
+    fn it_fails() {
         panic!("Test failed!");
     }
 
     #[test]
-    fn call_simple_add(){
+    fn call_simple_add() {
         assert!(simple_add())
     }
 }
 
 fn simple_add() -> bool {
-    if 2+2==4{
+    if 2 + 2 == 4 {
         true
     } else {
         false

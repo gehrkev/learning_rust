@@ -8,9 +8,8 @@ async fn read_file(path: &str) -> io::Result<String> {
 }
 
 fn main() {
-
     let task = task::spawn(async {
-       let result = read_file("read.txt").await;
+        let result = read_file("read.txt").await;
         match result {
             Ok(k) => println!("{}", k),
             Err(e) => println!("Error reading from file: {}", e),
@@ -20,7 +19,6 @@ fn main() {
     println!("Task has started!");
     task::block_on(task);
     println!("Stopped task!");
-
 }
 
 // trait Future {

@@ -1,8 +1,8 @@
 fn hanoi(n: i32) -> i32 {
     if n == 0 {
-        return 0
+        return 0;
     }
-    return hanoi(n-1) + 1 + hanoi(n-1)
+    return hanoi(n - 1) + 1 + hanoi(n - 1);
 }
 
 fn main() {

@@ -105,27 +105,25 @@ pub fn main() {
     hs2.insert(7);
 
     for x in hs.intersection(&hs2) {
-        println!("Intersection: {}",x);
+        println!("Intersection: {}", x);
     }
     // vvvvv shorthand of this ^^^^
     let intersection = &hs & &hs2; //hset with the values that are in both hs s
     for x in intersection {
-        println!("Intersection: {}",x);
+        println!("Intersection: {}", x);
     }
 
     let union = &hs | &hs2; //hset with union of both hs
     for x in union {
-        println!("Union: {}",x);
+        println!("Union: {}", x);
     }
 
     let diff = &hs - &hs2;
     let diff2 = &hs2 - &hs;
     for x in diff {
-        println!("Diff: {}",x);
+        println!("Diff: {}", x);
     }
     for x in diff2 {
-        println!("Diff2: {}",x);
+        println!("Diff2: {}", x);
     }
-
-    
 }

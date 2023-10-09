@@ -50,14 +50,14 @@ impl Set for Motorcycle {
 
 use std::fmt::Debug;
 
-fn print<T: Debug>(value: T){
+fn print<T: Debug>(value: T) {
     println!("{:?}", value);
 }
 
 fn main() {
     let i = 42;
     let string = "Hi".to_string();
-    let v = vec![0,1,2];
+    let v = vec![0, 1, 2];
 
     print(i);
     print(string);

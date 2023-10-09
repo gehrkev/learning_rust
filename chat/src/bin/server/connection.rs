@@ -1,10 +1,10 @@
+use crate::chats_map::ChatTracker;
 use async_std::io::BufReader;
 use async_std::net::TcpStream;
 use async_std::prelude::*;
 use async_std::sync::{Arc, Mutex};
 use chat::utils::{self, ChatResult};
 use chat::{Client, Server};
-use crate::chats_map::ChatTracker;
 
 pub async fn handle(socket: TcpStream, chats: Arc<ChatTracker>) -> ChatResult<()> {
     let leaving = Arc::new(Leaving::new(socket.clone()));
@@ -39,7 +39,7 @@ pub async fn handle(socket: TcpStream, chats: Arc<ChatTracker>) -> ChatResult<()
 pub struct Leaving(Mutex<TcpStream>);
 
 impl Leaving {
-    pub fn new(client: TcpStream) -> Leaving{
+    pub fn new(client: TcpStream) -> Leaving {
         Leaving(Mutex::new(client))
     }
 
@@ -53,5 +53,3 @@ impl Leaving {
         Ok(())
     }
 }
-
-

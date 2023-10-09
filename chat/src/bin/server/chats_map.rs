@@ -5,8 +5,8 @@ use crate::chats::Chats;
 
 pub struct ChatTracker(Mutex<HashMap<Arc<String>, Arc<Chats>>>);
 
-impl ChatTracker{
-    pub fn new() -> ChatTracker{
+impl ChatTracker {
+    pub fn new() -> ChatTracker {
         ChatTracker(Mutex::new(HashMap::new()))
     }
 
@@ -15,6 +15,11 @@ impl ChatTracker{
     }
 
     pub fn find_or_new(&self, name: Arc<String>) -> Arc<Chats> {
-        self.0.lock().unwrap().entry(name.clone()).or_insert_with(|| Arc::new(Chats::new(name))).clone()
+        self.0
+            .lock()
+            .unwrap()
+            .entry(name.clone())
+            .or_insert_with(|| Arc::new(Chats::new(name)))
+            .clone()
     }
 }

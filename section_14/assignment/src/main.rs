@@ -16,8 +16,7 @@ fn fibonacci_join(n: u32) -> u32 {
 
     //Solution to the assignment goes here
 
-    let (a, b) = rayon::join(|| fib_recursive(n - 1),
-                             || fib_recursive(n - 2));
+    let (a, b) = rayon::join(|| fib_recursive(n - 1), || fib_recursive(n - 2));
     // ^^^ Do NOT use fibonacci_join() as the closure operations -- too much parallelism
     a + b
 }
@@ -26,7 +25,10 @@ fn main() {
     let start = Instant::now();
     let x = fib_recursive(47);
     let duration = start.elapsed();
-    println!("Recursive fibonacci answer: {}, time taken: {:?}", x, duration);
+    println!(
+        "Recursive fibonacci answer: {}, time taken: {:?}",
+        x, duration
+    );
 
     println!("Now run with Rayon's join.");
 

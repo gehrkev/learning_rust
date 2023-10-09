@@ -1,11 +1,11 @@
-use async_std::{task, net};
+use async_std::prelude::*;
+use async_std::{net, task};
 use chat::utils::ChatResult;
 use std::sync::Arc;
-use async_std::prelude::*;
 
-mod connection;
 mod chats;
 mod chats_map;
+mod connection;
 
 use connection::handle;
 
@@ -30,10 +30,9 @@ fn main() -> ChatResult<()> {
             let chats = chat_table.clone();
 
             task::spawn(async {
-                log_error(handle(socket,chats).await);
+                log_error(handle(socket, chats).await);
             });
         }
         Ok(())
     })
-
 }

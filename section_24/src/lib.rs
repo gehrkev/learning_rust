@@ -1,9 +1,9 @@
-use std::ops::Deref;
 use std::cmp::Ordering;
+use std::ops::Deref;
 
 pub struct BinarySearchTree<T>
-    where
-        T: Ord,
+where
+    T: Ord,
 {
     value: Option<T>,
     left: Option<Box<BinarySearchTree<T>>>,
@@ -11,8 +11,8 @@ pub struct BinarySearchTree<T>
 }
 
 impl<T> Default for BinarySearchTree<T>
-    where
-        T: Ord,
+where
+    T: Ord,
 {
     fn default() -> Self {
         Self::new()
@@ -20,8 +20,8 @@ impl<T> Default for BinarySearchTree<T>
 }
 
 impl<T> BinarySearchTree<T>
-    where
-        T: Ord,
+where
+    T: Ord,
 {
     pub fn new() -> BinarySearchTree<T> {
         // create root node
@@ -33,7 +33,7 @@ impl<T> BinarySearchTree<T>
     }
 
     //Return a new iterator which iterates over the tree in order from least to greatest
-    pub fn iter(&self) -> impl Iterator<Item=&T> {
+    pub fn iter(&self) -> impl Iterator<Item = &T> {
         BinarySearchTreeIter::new(self)
     }
 
@@ -50,9 +50,7 @@ impl<T> BinarySearchTree<T>
                         &mut self.right
                     };
                     match target_node {
-                        Some(ref mut node) => {
-                            node.insert(value)
-                        }
+                        Some(ref mut node) => node.insert(value),
                         None => {
                             let mut node = BinarySearchTree::new();
                             node.insert(value);
@@ -115,7 +113,7 @@ impl<T> BinarySearchTree<T>
                 Ordering::Greater => match &self.left {
                     Some(node) => node.floor(value),
                     None => None,
-                }
+                },
                 //key < value
                 Ordering::Less => match &self.right {
                     Some(node) => {
@@ -126,9 +124,9 @@ impl<T> BinarySearchTree<T>
                         }
                     }
                     None => Some(key),
-                }
+                },
                 Ordering::Equal => Some(key),
-            }
+            },
             None => None,
         }
     }
@@ -140,7 +138,7 @@ impl<T> BinarySearchTree<T>
                 Ordering::Less => match &self.right {
                     Some(node) => node.ceil(value),
                     None => None,
-                }
+                },
                 //key > value
                 Ordering::Greater => match &self.left {
                     Some(node) => {
@@ -151,24 +149,24 @@ impl<T> BinarySearchTree<T>
                         }
                     }
                     None => Some(key),
-                }
+                },
                 Ordering::Equal => Some(key),
-            }
+            },
             None => None,
         }
     }
 }
 
 pub struct BinarySearchTreeIter<'a, T>
-    where
-        T: Ord,
+where
+    T: Ord,
 {
     stack: Vec<&'a BinarySearchTree<T>>,
 }
 
 impl<'a, T> BinarySearchTreeIter<'a, T>
-    where
-        T: Ord,
+where
+    T: Ord,
 {
     pub fn new(tree: &BinarySearchTree<T>) -> BinarySearchTreeIter<T> {
         let mut iter = BinarySearchTreeIter { stack: vec![tree] };
@@ -184,8 +182,8 @@ impl<'a, T> BinarySearchTreeIter<'a, T>
 }
 
 impl<'a, T> Iterator for BinarySearchTreeIter<'a, T>
-    where
-        T: Ord,
+where
+    T: Ord,
 {
     type Item = &'a T;
     fn next(&mut self) -> Option<&'a T> {
@@ -219,7 +217,8 @@ mod test {
     }
 
     #[test]
-    fn test_iterator() { //iterating the tree w values from least to greatest
+    fn test_iterator() {
+        //iterating the tree w values from least to greatest
         let tree = create_tree();
         let mut iter = tree.iter();
         assert_eq!(iter.next().unwrap(), &0);

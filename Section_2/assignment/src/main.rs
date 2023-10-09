@@ -7,7 +7,7 @@ fn main() {
     let ans = val1 % val2;
     println!("{}", ans);
     // 2
-    let mut vector = vec![2,4,6,8,10];
+    let mut vector = vec![2, 4, 6, 8, 10];
     println!("{}", vector[0]);
     println!("{}", vector[1]);
     println!("{}", vector[2]);
@@ -22,7 +22,7 @@ fn main() {
     println!("{}", vector[3]);
     println!("{}", vector[4]);
     println!("{:?}", vector); // instructor solution
-    // 3
+                              // 3
     let string = "Hello".to_string();
     println!("{}", string);
     println!("{}", concat_string(string.clone()));

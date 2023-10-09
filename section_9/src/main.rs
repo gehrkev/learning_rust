@@ -1,7 +1,7 @@
-use std::fs::File;
-use std::io::ErrorKind;
 use std::fs::rename;
+use std::fs::File;
 use std::io::Error;
+use std::io::ErrorKind;
 
 fn main() {
     // panic!("panicked here");
@@ -36,4 +36,3 @@ fn rename_file() -> Result<(), Error> {
 //     Ok(T),
 //     Err(E),
 // }
-
