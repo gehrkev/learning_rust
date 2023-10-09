@@ -359,6 +359,12 @@ name = "data_types"
 version = "0.1.0"
 
 [[package]]
+name = "disjoint-sets"
+version = "0.4.2"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "4ccbbca7d6a247007ca2535c616d4bb4a5fcad176ef0218671f96b88c52c3d34"
+
+[[package]]
 name = "either"
 version = "1.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -984,6 +990,13 @@ version = "0.1.0"
 [[package]]
 name = "section_27"
 version = "0.1.0"
+
+[[package]]
+name = "section_28"
+version = "0.1.0"
+dependencies = [
+ "disjoint-sets",
+]
 
 [[package]]
 name = "section_6"
